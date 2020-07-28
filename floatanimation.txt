@@ -1,0 +1,21 @@
+if Circle1.Tag = 0 then
+  begin
+    FloatAnimation2.Inverse := false;
+    FloatAnimation2.start;
+  end
+  else
+  begin
+    FloatAnimation2.Inverse := true;
+    FloatAnimation2.start;
+  end;
+  if Circle1.Tag = 0 then
+    Circle1.Tag := 1
+  else
+    Circle1.Tag := 0;
+
+  Circle1.Position.y := Self.LayClientes.Position.y +
+      Self.LayClientes.Height - 70;
+    Circle2.Position.y := Self.LayClientes.Position.y +
+      Self.LayClientes.Height - 70;
+    FloatAnimation2.StartValue := Circle2.Position.y;
+    FloatAnimation2.StopValue := Circle2.Position.y - 50;
